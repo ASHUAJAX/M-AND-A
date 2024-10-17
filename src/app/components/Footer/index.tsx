@@ -26,7 +26,7 @@ function Footer() {
           <ul>
             {
               data.map((elm,ix)=>(
-                <li>{">"} <a href={elm.link}>{elm.name}</a></li>
+                <li key={ix}>{">"} <a href={elm.link}>{elm.name}</a></li>
               ))
             }
           </ul>
