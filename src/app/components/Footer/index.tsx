@@ -1,87 +1,46 @@
-"use client";
-import { CircularProgress } from "@mui/material";
 import Link from "next/link";
-import React, { useState } from "react";
-import ButtonComp from "../ButtonComp";
-import CustomInput from "../CustomInput";
-
-
-interface EmailInputData {
-  name: string;
-  placeholder: string;
-  value: string;
-  error?: string;
-  label?: string;
-  required: boolean;
-  type: string;
-}
-
+import React from "react";
+import data from "../Navbar/data.json";
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import EmailIcon from '@mui/icons-material/Email';
 function Footer() {
-  const [emailInputData, setEmailInputData] = useState<EmailInputData[]>([
-    {
-      name: "email",
-      placeholder: "Your email for updates",
-      value: "",
-      label: "Enter your email address",
-      required: true,
-      type: "email",
-    },
-  ]);
-
-  const [isEmailSent, setIsEmailSent] = useState<"loading" | boolean>(false);
-
-  const onSendMessage = (e: React.FormEvent<HTMLFormElement>): void => {
-    setIsEmailSent("loading");
-    e.preventDefault();
-    setTimeout(() => {
-      setIsEmailSent(true);
-    }, 2000);
-  };
-
-
-
   return (
-    <div className="Footer" data-aos="zoom-in">
-      <div className="Footer_wrapper">
-        <div className="Footer_wrapper_contact">
-          <h1 className="Footer_wrapper_contact_head">contact</h1>
-          <p className="Footer_wrapper_contact_email" >info@example.online</p>
-          <p className="Footer_wrapper_contact_address" >
-            10th Floor Tower B Windsor IT Park Sector 125,
-            <br /> Noida, Uttar Pradesh 201313
+    <div>
+      <div className="w-full gap-5 p-10 flex justify-center  bg-slate-800 text-white">
+        <div className="basis-1/5">
+          <div className="text-3xl font-extrabold text-black bg-primary px-4 p-1 rounded">
+            <h1>
+              {" "}
+              <Link href={data[0].link}>M_&_A</Link>
+            </h1>
+          </div>
+          <p>
+            We are a uniform manufacturer, uniform wholesaler and uniform
+            supplier of superlative quality uniforms and workwear, providing
+            uniform to diverse range of industries like Education, Corporate,
+            Health, Hospitality and many more sectors.
           </p>
         </div>
-        <div className="Footer_wrapper_quickLinks">
-          <h1 className="Footer_wrapper_quickLinks_head">quick links</h1>
-          <ul className="Footer_wrapper_quickLinks_list">
-            <li><Link href="/privacy-policy">privacy policy</Link></li>
-            <li ><Link href="/terms-&-condition">terms & condition</Link></li>
-            <li ><Link href="/refund-policy">refund policy</Link></li>
+        <div className="basis-1/5">
+          <h1 className="text-xl font-bold w-max mb-2  border-dashed border-primary border-b-2">Quick Links</h1>
+          <ul>
+            {
+              data.map((elm,ix)=>(
+                <li>{">"} <a href={elm.link}>{elm.name}</a></li>
+              ))
+            }
           </ul>
         </div>
-        <div className="Footer_wrapper_sendMsg">
-          <h1 className="Footer_wrapper_sendMsg_head">contact</h1>
-          {isEmailSent ? (
-            <p className="Footer_wrapper_sendMsg_afterSubmit">
-              {isEmailSent === "loading" ? (
-                <CircularProgress thickness={7} sx={{ color: "#b87dff" }} />
-              ) : (
-                "Email sent successfully!"
-              )}
-            </p>
-          ) : (
-            <form onSubmit={onSendMessage}  >
-              <CustomInput setData={setEmailInputData} data={emailInputData} />
-              <br />
-              <ButtonComp varient="fill" text="send message" type="submit" />
-            </form>
-          )}
+        <div className="basis-1/5">
+          <h1 className="text-xl font-bold w-max mb-2  border-dashed border-primary border-b-2">Head Office</h1>
+          <p>mahagun mall</p>
+        </div>
+        <div className="basis-1/5">
+          <h1 className="text-xl font-bold w-max mb-2  border-dashed border-primary border-b-2">Quick Links</h1>
+          <p><LocalPhoneIcon className="mr-1" /> +91 88158 25951</p>
+          <p><EmailIcon className="mr-1" /> info@manda.gmail.com</p>
         </div>
       </div>
-
-      <p className="Footer_bottom">
-        © 2024. VEARN OUTFITS PRIVATE LIMITED. All rights reserved.
-      </p>
     </div>
   );
 }
