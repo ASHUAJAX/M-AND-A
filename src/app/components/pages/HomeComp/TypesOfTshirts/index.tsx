@@ -4,7 +4,7 @@ import { data } from "./data";
 function TypesOfTshirts() {
   return (
     <div className="w-full  my-14">
-      <h1 className="text-4xl md:text-5xl text-center  font-extrabold">
+      <h1 className="text-4xl mb-[-50px] md:text-5xl text-center  font-extrabold">
         TYPES OF T-SHIRTS
       </h1>
       <div className="flex flex-wrap p-10 gap-10 mt-24 justify-center items-stretch">
