@@ -26,7 +26,7 @@ function PrintOnDemand() {
 
             <div className='w-full py-14 bg-primary flex flex-col text-center'>
                 <h1 className='text-4xl md:text-5xl  text-[#2F2E0C] font-extrabold'>
-                    Make Print on Demand t-shirts <br /> with Printify
+                    Make Print on Demand <br /> t-shirts  with Printify
                 </h1>
                 <p className='my-7 w-full px-5  m-auto'>Start creating shirts online with your own artwork. Simply pick and apply your<br />
                     design to a blank t-shirt.</p>
