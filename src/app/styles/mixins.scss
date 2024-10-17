@@ -1,0 +1,16 @@
+@import "./var.scss";
+@mixin flex-center{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+@mixin headingFontSizeMixin{
+    font-size:$headingFontSize;
+    font-weight: 900;
+
+    @media (max-width: 768px) {
+        font-size: $smallHeadingFontSize; // Replace with your smaller font size variable
+    }
+}
+

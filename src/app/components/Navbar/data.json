@@ -1,0 +1,26 @@
+[
+  {
+    "name": "home",
+    "link": "/"
+  },
+  {
+    "name": "about us",
+    "link": "/about-us"
+  },
+  {
+    "name": "our products",
+    "link": "/our-products"
+  },
+  {
+    "name": "our quality",
+    "link": "/our-quality"
+  },
+  {
+    "name": "why us",
+    "link": "/why-us"
+  },
+  {
+    "name": "contact us",
+    "link": "/contact-us"
+  }
+]
