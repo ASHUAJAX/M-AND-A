@@ -9,10 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#aeff6e;", // Change this hex code to your desired primary color
+        primary: "#aeff6e", // Change this hex code to your desired primary color
       },
       boxShadow: {
-        'custom': 'rgba(0, 0, 0, 0.1) 0px 4px 12px;',
+        'custom': 'rgba(0, 0, 0, 0.1) 0px 4px 12px',
       }
     },
   },
