@@ -3,7 +3,7 @@ import React from 'react'
 
 function HeroSec() {
   return (
-    <div className='h-screen flex justify-between  bg-[#F5F5F0]'>
+    <div className=' flex justify-between flex-col md:flex-row gap-5  bg-[#F5F5F0]'>
         <div className='flex-1 pl-5 mt-28 '>
             <h1 className='text-7xl font-extrabold  mb-3'>Make your own shirt​</h1>
             <p>&bull;&nbsp;  Beginner-friendly design methods</p>

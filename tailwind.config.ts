@@ -13,6 +13,12 @@ const config: Config = {
       },
       boxShadow: {
         'custom': 'rgba(0, 0, 0, 0.1) 0px 4px 12px',
+      },
+      keyframes:{
+        'slide-in': {
+          '0%': { transform: 'translateX(-100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        }
       }
     },
   },
